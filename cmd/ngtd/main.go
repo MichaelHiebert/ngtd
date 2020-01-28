@@ -24,7 +24,7 @@ import (
 
 	"github.com/kpango/glg"
 	"github.com/yahoojapan/gongt"
-	"github.com/MichaelHiebert/ngtd"
+	"github.com/yahoojapan/ngtd"
 	"github.com/yahoojapan/ngtd/cmd/ngtd/build"
 	"github.com/yahoojapan/ngtd/kvs"
 	"golang.org/x/sync/errgroup"

@@ -38,10 +38,10 @@ test: clean init proto/ngtd.pb.go
 	GO111MODULE=on go test --race -v ./...
 
 docker-build:
-	docker build --pull=true --file=Dockerfile -t hiebertmd/ngtd:latest .
+	docker build --pull=true --file=Dockerfile -t yahoojapan/ngtd:latest .
 
 docker-push:
-	docker push hiebertmd/ngtd:latest
+	docker push yahoojapan/ngtd:latest
 
 coverage:
 	go test -v -race -covermode=atomic -coverprofile=coverage.out ./...

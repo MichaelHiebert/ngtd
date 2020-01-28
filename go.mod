@@ -1,4 +1,4 @@
-module github.com/MichaelHiebert/ngtd
+module github.com/yahoojapan/ngtd
 
 go 1.12
 
