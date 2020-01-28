@@ -64,6 +64,9 @@ func NewNGTD(index string, db kvs.KVS, port int) (*NGTD, error) {
 	sigCh := make(chan os.Signal, 1)
 	signal.Notify(sigCh, syscall.SIGTERM, syscall.SIGINT)
 
+	// set the distance type to Cosine Distance
+	gongt.SetDistanceType(gongt.Cosine)
+	
 	gongt.SetIndexPath(index).Open()
 	service.SetDB(db)
 
