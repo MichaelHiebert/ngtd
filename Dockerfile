@@ -27,12 +27,12 @@ RUN cd /opt && curl -sSL -O https://storage.googleapis.com/golang/go${GOVERSION}
     ln -s /opt/go/bin/go /usr/bin/ && \
     mkdir $GOPATH
 
-WORKDIR ${GOPATH}/src/github.com/yahoojapan/ngtd
+WORKDIR ${GOPATH}/src/github.com/MichaelHiebert/ngtd
 COPY . .
 
 RUN make deps
 
-WORKDIR ${GOPATH}/src/github.com/yahoojapan/ngtd/cmd/ngtd
+WORKDIR ${GOPATH}/src/github.com/MichaelHiebert/ngtd/cmd/ngtd
 RUN CGO_ENABLED=1 \
     CGO_CXXFLAGS="-g -Ofast -march=native" \
     CGO_FFLAGS="-g -Ofast -march=native" \
