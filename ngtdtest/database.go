@@ -34,6 +34,9 @@ func CreateDB(t *testing.T) *Map {
 	m := NewMap()
 	gongt.Get().SetIndexPath(db).SetDimension(6).Open()
 
+	// set the distance type to Cosine Distance
+	gongt.SetDistanceType(gongt.Cosine)
+
 	f, err := os.Open("../assets/test/test.tsv")
 	if err != nil {
 		t.Errorf("Unexpected error: CreateDBWithDelete(%v)", err)
