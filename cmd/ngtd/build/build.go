@@ -55,9 +55,6 @@ func NewBuilder(db kvs.KVS, r Reader, p Parser, parallelParseSize int) *builder 
 }
 
 func (b *builder) Run(index string, dimension, poolSize int) error {
-	// set the distance type to Cosine Distance
-	gongt.SetDistanceType(gongt.Cosine)
-
 	gongt.SetIndexPath(index)
 	if dimension > 0 {
 		gongt.SetDimension(dimension)
